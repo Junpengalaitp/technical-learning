@@ -1,0 +1,188 @@
+{
+    "root": {
+        "data": {
+            "id": "c7qpsfc40vs0",
+            "created": 1607766869389,
+            "text": "API and Pod"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "c7qptczia7k0",
+                    "created": 1607766942637,
+                    "text": "Interacting with K8s"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "c7qptke2jo80",
+                            "created": 1607766958755,
+                            "text": "K8s API"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c7qptuc8w6w0",
+                            "created": 1607766980413,
+                            "text": "mostly RESTful"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c7qptz983jk0",
+                            "created": 1607766991114,
+                            "text": "create, read, update, detele resources"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c7qpu6m7q800",
+                            "created": 1607767007137,
+                            "text": "resource types"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "c7qpu9wwjgo0",
+                                    "created": 1607767014314,
+                                    "text": "node"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "c7qpui8s78w0",
+                                            "created": 1607767032446,
+                                            "text": "a machine, pyhsical or virtual in our cluster"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "c7qpubrpp5c0",
+                                    "created": 1607767018353,
+                                    "text": "pod"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "c7qpus00zcg0",
+                                            "created": 1607767053685,
+                                            "text": "group of containers running together on a node"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "c7qpud8riu80",
+                                    "created": 1607767021561,
+                                    "text": "service"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "c7qpuzzskiw0",
+                                            "created": 1607767071085,
+                                            "text": "stable network endpoint to connect to on or multiple containers"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "c7qpxhg5lgg0",
+                    "created": 1607767265808,
+                    "text": "Pods"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "c7qpxlddxuw0",
+                            "created": 1607767274348,
+                            "text": "an abstraction"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c7qpxtfaf0o0",
+                            "created": 1607767291877,
+                            "text": "can have one or multiple containers working together"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c7qpy84ua0o0",
+                            "created": 1607767323897,
+                            "text": "usually one container per pod"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c7qpyff9eeo0",
+                            "created": 1607767339764,
+                            "text": "the smallest deployable unit"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c7qpynvx1ns0",
+                            "created": 1607767358186,
+                            "text": "k8s cannot manage container directly"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c7qpyuvpniw0",
+                            "created": 1607767373411,
+                            "text": "IP addrs are associated with pods, not with individual containers"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c7qpzh9r3z40",
+                            "created": 1607767422149,
+                            "text": "containers in a pod share localhost, and can share volumes"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c7qpzqqxzx40",
+                            "created": 1607767442780,
+                            "text": "multiple containers in a pod are deployed together"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c7qq02qbl6o0",
+                            "created": 1607767468863,
+                            "text": "Docker does not know a pod, only containers/name spaces/volumes"
+                        },
+                        "children": []
+                    }
+                ]
+            }
+        ]
+    },
+    "template": "right",
+    "theme": "classic",
+    "version": "1.4.43"
+}
