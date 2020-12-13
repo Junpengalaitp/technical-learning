@@ -1,0 +1,183 @@
+{
+    "root": {
+        "data": {
+            "id": "c7roxi0crzc0",
+            "created": 1607866005876,
+            "text": "Kubectl"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "c7roz7wfn340",
+                    "created": 1607866140599,
+                    "text": "look at node resources"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "c7roze9yhi80",
+                            "created": 1607866154478,
+                            "text": "kubectl get node"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c7rozj0yzts0",
+                            "created": 1607866164818,
+                            "text": "equivalents",
+                            "expandState": "collapse"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "c7rozosq82g0",
+                                    "created": 1607866177381,
+                                    "text": "kubectl get no"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "c7rozrsbp480",
+                                    "created": 1607866183887,
+                                    "text": "kubectl get nodes"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "c7rp0gzsmyg0",
+                            "created": 1607866238758,
+                            "text": "more info"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "c7rp15hamn40",
+                                    "created": 1607866292059,
+                                    "text": "kubectl get node -o wide"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "c7rp1735o880",
+                                    "created": 1607866295557,
+                                    "text": "kubectl get node -o yaml"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "c7rp4snlz5c0",
+                            "created": 1607866577599,
+                            "text": "kubectl describe node/<node name>"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c7rp59w5cbk0",
+                            "created": 1607866615121,
+                            "text": "kubectl describe node <node name>"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "c7rp4rpzi3c0",
+                    "created": 1607866575566,
+                    "text": "resource types"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "c7rp7956e940",
+                            "created": 1607866770218,
+                            "text": "list all available resources"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "c7rp7elufgw0",
+                                    "created": 1607866782110,
+                                    "text": "kubectl api-resources"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "c7rp7mqqk5s0",
+                            "created": 1607866799820,
+                            "text": "view the definition of a resource"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "c7rp7t968800",
+                                    "created": 1607866813995,
+                                    "text": "kubectl explain <type name>"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "c7rp8f5sw3k0",
+                            "created": 1607866861681,
+                            "text": "view the definition of a field of a resource"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "c7rp8mca4u80",
+                                    "created": 1607866877310,
+                                    "text": "kubectl explain <type name>.<type field>"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "c7rp9bcdnyg0",
+                            "created": 1607866931736,
+                            "text": "get the list of all fields and sub-fields"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "c7rp9h0n01s0",
+                                    "created": 1607866944086,
+                                    "text": "kubectl explain node --recursive"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "c7rp4k8swuo0",
+                    "created": 1607866559289,
+                    "text": "namespaces "
+                },
+                "children": []
+            }
+        ]
+    },
+    "template": "right",
+    "theme": "classic",
+    "version": "1.4.43"
+}
