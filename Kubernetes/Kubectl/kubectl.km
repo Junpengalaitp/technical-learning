@@ -169,11 +169,365 @@
             },
             {
                 "data": {
+                    "id": "c7s8mkflqm80",
+                    "created": 1607921571344,
+                    "text": "services"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "c7s8mmty1mg0",
+                            "created": 1607921576565,
+                            "text": "a stable endpoint to connect to \"something\""
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c7s8mqvd7o80",
+                            "created": 1607921585358,
+                            "text": "list the services on the cluster"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "c7s8nbm7zl40",
+                                    "created": 1607921630517,
+                                    "text": "kubectl get services"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "c7s8njtnvds0",
+                                    "created": 1607921648381,
+                                    "text": "kubectl get svc"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "c7s8nxo6lhc0",
+                                    "created": 1607921678525,
+                                    "text": "kubectl get pods"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
                     "id": "c7rp4k8swuo0",
                     "created": 1607866559289,
                     "text": "namespaces "
                 },
-                "children": []
+                "children": [
+                    {
+                        "data": {
+                            "id": "c7s8p8zuvds0",
+                            "created": 1607921781540,
+                            "text": "allow us to segregate resources"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "c7s8ps0otaw0",
+                                    "created": 1607921822949,
+                                    "text": "kubectl get namespaces"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "c7s8pwblruo0",
+                                    "created": 1607921832316,
+                                    "text": "kubectl get namespace"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "c7s8q0jw2ag0",
+                                    "created": 1607921841524,
+                                    "text": "kubectl get ns"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "c7s8rlbcho00",
+                            "created": 1607921965084,
+                            "text": "by default, kubectl uses the default namespace"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c7s8skv0n3k0",
+                            "created": 1607922042461,
+                            "text": "list the pods in all namespaces"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "c7s8sosc3fk0",
+                                    "created": 1607922051006,
+                                    "text": "kubectl get pods --all-namespaces"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "c7s8svld9940",
+                                    "created": 1607922065822,
+                                    "text": "kubectl get pods -A"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "c7s8zmh92800",
+                            "created": 1607922594531,
+                            "text": "list only the pods in specific namespace"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "c7s9045xyjc0",
+                                    "created": 1607922633030,
+                                    "text": "kubectl get pods --namespace=<name>"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "c7s90cynq000",
+                                    "created": 1607922652180,
+                                    "text": "kubectl get pods -n <name>"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "c7s8uzrxclc0",
+                    "created": 1607922231654,
+                    "text": "control plane pods"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "c7s8v54glqw0",
+                            "created": 1607922243296,
+                            "text": "etcd"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "c7s8v6svn1k0",
+                                    "created": 1607922246949,
+                                    "text": "etcd server"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "c7s8veecpfc0",
+                            "created": 1607922263485,
+                            "text": "kube-apiserver"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "c7s8vi0zjq80",
+                                    "created": 1607922271384,
+                                    "text": "the api server"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "c7s8vnv1db40",
+                            "created": 1607922284085,
+                            "text": "kube-controller-manager & kube-scheduler"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "c7s8vwtksk00",
+                                    "created": 1607922303588,
+                                    "text": "other control plane components"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "c7s8w30xnps0",
+                            "created": 1607922317093,
+                            "text": "coredns"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "c7s8w7akp540",
+                                    "created": 1607922326383,
+                                    "text": "DNS-Based service discovery"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "c7s8wj4opkw0",
+                            "created": 1607922352149,
+                            "text": "kube-proxy"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "c7s8wn3ok800",
+                                    "created": 1607922360795,
+                                    "text": "component managing port mapping and such"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "c7s8ye5s8sw0",
+                            "created": 1607922498059,
+                            "text": "storage-provisioner"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "c7s8yi4mieg0",
+                                    "created": 1607922506696,
+                                    "text": "determines what volume plugin is used for provisioning PVs"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "c7s8yzws2740",
+                            "created": 1607922545404,
+                            "text": "the READY colum indicates the number of containers in each pod"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "c7s925db4nk0",
+                    "created": 1607922792380,
+                    "text": "kube-public"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "c7s929rutcg0",
+                            "created": 1607922801967,
+                            "text": "created by the installer and used for security bootstrapping"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c7s9347ujq80",
+                            "created": 1607922868237,
+                            "text": "kubectl -n kube-public get pods"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c7s94brd8gw0",
+                            "created": 1607922963019,
+                            "text": "cluster-info"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "c7s94i4ykxk0",
+                                    "created": 1607922976902,
+                                    "text": "list ConfigMap objects"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "c7s94q2ato00",
+                                            "created": 1607922994155,
+                                            "text": "kubectl -n kube-public get configmaps"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "c7s94rukna80",
+                                    "created": 1607922998041,
+                                    "text": "inspect cluster-info"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "c7s94vuz5v40",
+                                            "created": 1607923006773,
+                                            "text": "kubectl -n kube-public get configmap cluster-info -o yaml"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "c7s96h1c5wo0",
+                    "created": 1607923131234,
+                    "text": "kube-node-lease"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "c7s977dhy1s0",
+                            "created": 1607923188566,
+                            "text": "contains one lease object per node"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c7s97fb6z480",
+                            "created": 1607923205841,
+                            "text": "node leases are a new way to implement node heartbeats"
+                        },
+                        "children": []
+                    }
+                ]
             }
         ]
     },
