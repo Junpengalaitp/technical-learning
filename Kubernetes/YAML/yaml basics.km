@@ -1,0 +1,219 @@
+{
+    "root": {
+        "data": {
+            "id": "c7v199vvsls0",
+            "created": 1608205461750,
+            "text": "YAML"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "c7v19vq9s1s0",
+                    "created": 1608205509300,
+                    "text": "technically a superset of JSON, designed for humans"
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "c7v1aaozilc0",
+                    "created": 1608205541874,
+                    "text": "spaces set the structure. One space off and game over"
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "c7v1aocmlao0",
+                    "created": 1608205571602,
+                    "text": "remeber spaces not tabs, ever"
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "c7v1asiplzk0",
+                    "created": 1608205580677,
+                    "text": "two spaces is standard, and four spaces works too"
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "c7v1bhqiy5k0",
+                    "created": 1608205635569,
+                    "text": "K8s yaml"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "c7v1bk7lsmg0",
+                            "created": 1608205640955,
+                            "text": "each file contains one or more manifests"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c7v1bwb1thk0",
+                            "created": 1608205667285,
+                            "text": "each manifest describes an API Object"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c7v1c3qdyeo0",
+                            "created": 1608205683450,
+                            "text": "each manifest needs four parts"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "c7v1cpbbm4w0",
+                                    "created": 1608205730428,
+                                    "text": "apiVersion"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "c7v1cr9l8zk0",
+                                    "created": 1608205734677,
+                                    "text": "kind"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "c7v1csm6qe80",
+                                    "created": 1608205737615,
+                                    "text": "metadata"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "c7v1cv0dmu00",
+                                    "created": 1608205742827,
+                                    "text": "spec"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "c7v1ibqingw0",
+                    "created": 1608206171057,
+                    "text": "generating yaml without creating resources"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "c7v1iil7pi80",
+                            "created": 1608206185974,
+                            "text": "kubectl create deployment web --image nginx -o yaml --dry-run"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "c7v242ozfps0",
+                    "created": 1608207875385,
+                    "text": "advantage"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "c7v247btq080",
+                            "created": 1608207885473,
+                            "text": "declarative"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c7v24b19z5s0",
+                            "created": 1608207893542,
+                            "text": "describe the desired state of our cluster and applications"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c7v24spbaao0",
+                            "created": 1608207932001,
+                            "text": "yaml can be stored, versioned and archived"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c7v25380b3k0",
+                            "created": 1608207954899,
+                            "text": "to change resources, change yaml files"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c7v259iq96o0",
+                            "created": 1608207968608,
+                            "text": "change can be reviewed before being applied"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "c7v26lkghiw0",
+                    "created": 1608208073198,
+                    "text": "practice"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "c7v26nd8log0",
+                            "created": 1608208077115,
+                            "text": "get started with kubectl run/create/expose etc"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c7v26z9rvwo0",
+                            "created": 1608208103028,
+                            "text": "dump the yaml with kubectl get -o yaml"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c7v2762npzc0",
+                            "created": 1608208117834,
+                            "text": "tweak that yaml and kubectl apply it back"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c7v27e1idvs0",
+                            "created": 1608208135179,
+                            "text": "store that yaml for reference"
+                        },
+                        "children": []
+                    }
+                ]
+            }
+        ]
+    },
+    "template": "right",
+    "theme": "classic",
+    "version": "1.4.43"
+}
