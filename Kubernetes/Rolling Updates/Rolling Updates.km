@@ -1,0 +1,221 @@
+{
+    "root": {
+        "data": {
+            "id": "c7wrmgs0x1c0",
+            "created": 1608381404303,
+            "text": "Rolling Update"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "c7wrmrjrbaw0",
+                    "created": 1608381427748,
+                    "text": "default scaled resource update"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "c7wrnahe4sg0",
+                            "created": 1608381468963,
+                            "text": "new pods are created"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c7wrncumxwo0",
+                            "created": 1608381474118,
+                            "text": "old pods are terminated"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c7wrngtj7s80",
+                            "created": 1608381482758,
+                            "text": "all at the same time"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c7wrnk1epy00",
+                            "created": 1608381489765,
+                            "text": "if something goes wrong..."
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "c7wro3g64n40",
+                    "created": 1608381532016,
+                    "text": "rolling updates"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "c7wro8ovi600",
+                            "created": 1608381543426,
+                            "text": "the deployment controls multiple replica sets"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c7wrohy158o0",
+                            "created": 1608381563571,
+                            "text": "each replica set is a group of identical pods"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c7wrowwbnsw0",
+                            "created": 1608381596120,
+                            "text": "during the rolling update, we have at least two replica sets"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "c7wrp6eonqg0",
+                                    "created": 1608381616821,
+                                    "text": "the new set (corresponding to the \"target\" version)"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "c7wrphjokrs0",
+                                    "created": 1608381641068,
+                                    "text": "at least one \"old\" set"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "c7wrpolwas80",
+                            "created": 1608381656439,
+                            "text": "we can have multiple \"old\" set"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "c7wrq5327080",
+                    "created": 1608381692305,
+                    "text": "update strategy"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "c7wrqd7q8qo0",
+                            "created": 1608381710002,
+                            "text": "two parameters determine the pace of the rollout"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "c7wrqoio2iw0",
+                                    "created": 1608381734608,
+                                    "text": "the maxUnavailable"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "c7wrqswm14w0",
+                                    "created": 1608381744159,
+                                    "text": "maxSurge"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "c7wrqwtyq7c0",
+                            "created": 1608381752705,
+                            "text": "they can be specified absolute number of pods, or percentage of the replicas count"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c7wrrbnrsog0",
+                            "created": 1608381784982,
+                            "text": "at any time"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "c7wrreqw63s0",
+                                    "created": 1608381791702,
+                                    "text": "there will always be at least replicas-maxUnavailavle pods available"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "c7wrrtlo1ow0",
+                                    "created": 1608381824037,
+                                    "text": "there will never be more than replicas + maxSurge pods in total"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "c7wrs5y8em00",
+                                    "created": 1608381850919,
+                                    "text": "there will therefore be up tp maxUnavailable + maxSurge pods being updated"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "c7wrqw13mi80",
+                    "created": 1608381750960,
+                    "text": "Practice"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "c7wrv53wq4o0",
+                            "created": 1608382084177,
+                            "text": "deployments, daemonsets, statefulsets"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c7wrvj4f4hk0",
+                            "created": 1608382114683,
+                            "text": "editing one of these resources will automatically result in a rolling update"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c7wrvth75qo0",
+                            "created": 1608382137224,
+                            "text": "rolling updates can be monitored with the kubectl rollout subcommand"
+                        },
+                        "children": []
+                    }
+                ]
+            }
+        ]
+    },
+    "template": "right",
+    "theme": "classic",
+    "version": "1.4.43"
+}
