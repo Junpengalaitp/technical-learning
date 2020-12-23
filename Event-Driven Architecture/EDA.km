@@ -1,0 +1,281 @@
+{
+    "root": {
+        "data": {
+            "id": "c8075t6f8js0",
+            "created": 1608729916732,
+            "text": "MainTopic"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "c8076hxttxs0",
+                    "created": 1608729970632,
+                    "text": "Event-driven Architecture"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "c8076hxu9j40",
+                            "created": 1608729970633,
+                            "text": "Enterprise Software Architecture"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "c8076hxu17k0",
+                                    "created": 1608729970633,
+                                    "text": "Monolith"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "c8076hxuh1c0",
+                                    "created": 1608729970633,
+                                    "text": "Microservices"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "c8076hxu34o0",
+                                    "created": 1608729970633,
+                                    "text": "EDA"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "c8076hxuq3k0",
+                                            "created": 1608729970634,
+                                            "text": "production, detection, consumption of, and reaction to events"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "c8076hxv1pc0",
+                                            "created": 1608729970634,
+                                            "text": "Microservices"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "c8076hxuyug0",
+                                            "created": 1608729970634,
+                                            "text": "Serverless"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "c8076hxutwg0",
+                                            "created": 1608729970634,
+                                            "text": "FaaS"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "c8076hxuwi80",
+                                            "created": 1608729970634,
+                                            "text": "Streaming"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "c8076hxul680",
+                                            "created": 1608729970634,
+                                            "text": "Event Souring"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "c8076hxup4o0",
+                                            "created": 1608729970634,
+                                            "text": "CQRS"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "c8076hxvk0w0",
+                            "created": 1608729970635,
+                            "text": "Messages"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "c8076hxv7bs0",
+                                    "created": 1608729970635,
+                                    "text": "Event"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "c8076hxvc800",
+                                            "created": 1608729970635,
+                                            "text": "something has already happened"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "c8076hxv4ns0",
+                                    "created": 1608729970635,
+                                    "text": "Command"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "c8076hxv9ts0",
+                                            "created": 1608729970635,
+                                            "text": "has specific target"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "c8076hxvk280",
+                            "created": 1608729970636,
+                            "text": "Benefits"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "c8076hxvqmo0",
+                                    "created": 1608729970636,
+                                    "text": "Decoupling"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "c8076hxvyko0",
+                                    "created": 1608729970636,
+                                    "text": "Encapsulation"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "c8076hxvxhs0",
+                                    "created": 1608729970636,
+                                    "text": "Performance"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "c8076hxw7q00",
+                                    "created": 1608729970636,
+                                    "text": "Scalability"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "c8076hxw5iw0",
+                            "created": 1608729970636,
+                            "text": "Drawbacks"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "c8076hxvxa00",
+                                    "created": 1608729970636,
+                                    "text": "Steep learning curve"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "c8076hxwa7c0",
+                                    "created": 1608729970636,
+                                    "text": "Complexity"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "c8076hxwjts0",
+                                    "created": 1608729970637,
+                                    "text": "Loss of transactionlity"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "c8076hxwn680",
+                                    "created": 1608729970637,
+                                    "text": "Lineage"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "c8076hxwq8w0",
+                            "created": 1608729970637,
+                            "text": "Event Storming & DDD"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "c8076hxwbo00",
+                                    "created": 1608729970637,
+                                    "text": "Typical system"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "c8076hxwn0g0",
+                                            "created": 1608729970637,
+                                            "text": "revolves around database"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "c8076hxwwmg0",
+                                    "created": 1608729970637,
+                                    "text": "EDA"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "c8076hxwlsw0",
+                                            "created": 1608729970637,
+                                            "text": "revolves around events"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "template": "default",
+    "theme": "fresh-blue",
+    "version": "1.4.43"
+}
