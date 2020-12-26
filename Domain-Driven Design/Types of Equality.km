@@ -1,0 +1,164 @@
+{
+    "root": {
+        "data": {
+            "id": "c82mtgu8a5s0",
+            "created": 1608977207176,
+            "text": "Equality"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "c82mtmpnxyg0",
+                    "created": 1608977219960,
+                    "text": "Indentifier equality"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "c82mtua0vy80",
+                            "created": 1608977236429,
+                            "text": "two objects has the same unque identifier"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "c82mu2zso4g0",
+                    "created": 1608977255401,
+                    "text": "Reference equality"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "c82mu7ayc1c0",
+                            "created": 1608977264783,
+                            "text": "two objects point to the same object"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "c82mwnxa76g0",
+                    "created": 1608977457690,
+                    "text": "Structural equality"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "c82mwt8qu9s0",
+                            "created": 1608977469267,
+                            "text": " every fields of two objects matches"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "c82mx9j50dc0",
+                    "created": 1608977504724,
+                    "text": "Entity"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "c82mxbmxfuo0",
+                            "created": 1608977509307,
+                            "text": "Indentifier equality"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c82mxeqjly80",
+                            "created": 1608977516056,
+                            "text": "Reference equality"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c82mzjcpyvc0",
+                            "created": 1608977682832,
+                            "text": "have inherent identity"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c82n09etd0g0",
+                            "created": 1608977739555,
+                            "text": "mutable "
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "c82mxgyfkxc0",
+                    "created": 1608977520886,
+                    "text": "Value Object"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "c82mxvcm9gg0",
+                            "created": 1608977552219,
+                            "text": "Reference equality"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c82mxyv1zjk0",
+                            "created": 1608977559864,
+                            "text": "Structural equality"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c82mz7vso140",
+                            "created": 1608977657864,
+                            "text": "don't have an id field"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c82mzbp9geg0",
+                            "created": 1608977666176,
+                            "text": "can be treated interchangeably"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c82mzx48xe80",
+                            "created": 1608977712795,
+                            "text": "immutable"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "c82n03ou09s0",
+                                    "created": 1608977727100,
+                                    "text": "on change, create new object"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "template": "right",
+    "theme": "classic",
+    "version": "1.4.43"
+}

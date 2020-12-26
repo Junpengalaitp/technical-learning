@@ -1,0 +1,55 @@
+{
+    "root": {
+        "data": {
+            "id": "c80zw38s2dk0",
+            "created": 1608810967188,
+            "text": "Idempotent"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "c80zwiog8ug0",
+                    "created": 1608811000788,
+                    "text": "Correlation identifier"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "c80zxtdscgg0",
+                            "created": 1608811102452,
+                            "text": "check numbers prevent against duplication"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c80zy0c6d6w0",
+                            "created": 1608811117592,
+                            "text": "correlation identifiers are derived external to a message"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c80zymhj0z40",
+                            "created": 1608811165805,
+                            "text": "summarize file contents for correlation identifier"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c811b0fth0o0",
+                            "created": 1608814957656,
+                            "text": "use INSERT IGNORE sql"
+                        },
+                        "children": []
+                    }
+                ]
+            }
+        ]
+    },
+    "template": "right",
+    "theme": "classic",
+    "version": "1.4.43"
+}
