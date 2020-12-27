@@ -1,0 +1,96 @@
+{
+    "root": {
+        "data": {
+            "id": "c83ktw5rj8g0",
+            "created": 1609073158262,
+            "text": "Aggregate"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "c83kuh9izv40",
+                    "created": 1609073204202,
+                    "text": "combine multiple entities"
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "c83kwh8uh0g0",
+                    "created": 1609073360889,
+                    "text": "invariants"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "c83ky68z4gw0",
+                            "created": 1609073493680,
+                            "text": "define the limits"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "c83ky0pvroo0",
+                    "created": 1609073481642,
+                    "text": "root entity"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "c83kyd9s97s0",
+                            "created": 1609073508967,
+                            "text": "main for the aggregate"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c83kyjbitso0",
+                            "created": 1609073522133,
+                            "text": "links another aggregat"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "c83l0t58rc80",
+                    "created": 1609073700249,
+                    "text": "value objects can be in different aggregates"
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "c83l1h9x0nc0",
+                    "created": 1609073752774,
+                    "text": "service layer should retrieve aggregates from database, perform operation and store it as a single object"
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "c83l3edezfs0",
+                    "created": 1609073903184,
+                    "text": "use transaction"
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "c83lkimc96g0",
+                    "created": 1609075244622,
+                    "text": "best practice: no more than 3 entities in an aggregate"
+                },
+                "children": []
+            }
+        ]
+    },
+    "template": "right",
+    "theme": "classic",
+    "version": "1.4.43"
+}
