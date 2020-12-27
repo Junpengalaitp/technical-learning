@@ -1,0 +1,71 @@
+{
+    "root": {
+        "data": {
+            "id": "c83fw0lghoo0",
+            "created": 1609059219097,
+            "text": "Bounded Context"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "c83fweis0d40",
+                    "created": 1609059249409,
+                    "text": "start off by working on the core domain"
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "c83fwkaokew0",
+                    "created": 1609059261981,
+                    "text": "begin with a single bounded context"
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "c83fwqksc5c0",
+                    "created": 1609059275652,
+                    "text": "constantly search for hidden abstraction"
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "c83fwyne16o0",
+                    "created": 1609059293224,
+                    "text": "distinctions between entities and value objects"
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "c83fxllv3so0",
+                    "created": 1609059343198,
+                    "text": "TDD and DDD"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "c83fxoarxug0",
+                            "created": 1609059349058,
+                            "text": "code first with experiments"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c83fxtsa2kg0",
+                            "created": 1609059361000,
+                            "text": "test first with clear picture"
+                        },
+                        "children": []
+                    }
+                ]
+            }
+        ]
+    },
+    "template": "right",
+    "theme": "classic",
+    "version": "1.4.43"
+}
