@@ -1,0 +1,22 @@
+{
+    "root": {
+        "data": {
+            "id": "c8i0lohyuy80",
+            "created": 1610539491824,
+            "text": "继承"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "c8i0naewdns0",
+                    "created": 1610539617892,
+                    "text": "利用现成的数据类型，对其进行“克隆”，再根据情况进行添加和修改"
+                },
+                "children": []
+            }
+        ]
+    },
+    "template": "right",
+    "theme": "classic",
+    "version": "1.4.43"
+}

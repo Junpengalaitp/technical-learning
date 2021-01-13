@@ -1,0 +1,114 @@
+{
+    "root": {
+        "data": {
+            "id": "c8i0nqghjpc0",
+            "created": 1610539652816,
+            "text": "多态"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "c8i0oee3je80",
+                    "created": 1610539704915,
+                    "text": "在处理类的层次结构时，通常把一个对象看成是它所属的基类，而不是把它当成具体类"
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "c8i0oi2qucw0",
+                    "created": 1610539712935,
+                    "text": "可以编写出不局限于特定类型的代码，子类依据自身的具体类型执行恰当的代码"
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "c8i0oqbnb740",
+                    "created": 1610539730888,
+                    "text": "代码不会受添加的新类型影响，并且添加新类型是扩展面向对象程序以处理新情况的常用方法"
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "c8i0p05bgv40",
+                    "created": 1610539752273,
+                    "text": "改善了我们的设计，且减少了软件的维护代价"
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "c8i1gd3bse00",
+                    "created": 1610541896283,
+                    "text": "方法调用绑定"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "c8i1ghkjqg00",
+                            "created": 1610541906032,
+                            "text": "前期绑定"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "c8i1gryn79c0",
+                                    "created": 1610541928652,
+                                    "text": "发生在程序运行前"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "c8i1go1i4rk0",
+                            "created": 1610541920117,
+                            "text": "后期绑定"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "c8i1h1zda8g0",
+                                    "created": 1610541950463,
+                                    "text": "运行时根据对象类型进行绑定"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "c8i1hibpifk0",
+                            "created": 1610541986038,
+                            "text": "Java中除了static和final(private 也是隐式的final), 其他所有方法都是后期绑定"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "c8i1lh47emg0",
+                    "created": 1610542296864,
+                    "text": "陷阱：属性与静态方法"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "c8i1mtjebdk0",
+                            "created": 1610542402268,
+                            "text": "只有普通的方法调用可以是多态的。如果直接访问一个属性，该访问会在编译时解析，因此不是多态的"
+                        },
+                        "children": []
+                    }
+                ]
+            }
+        ]
+    },
+    "template": "right",
+    "theme": "classic",
+    "version": "1.4.43"
+}

@@ -1,0 +1,30 @@
+{
+    "root": {
+        "data": {
+            "id": "c8i0kpikzgo0",
+            "created": 1610539415674,
+            "text": "封装"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "c8i0l44qp9c0",
+                    "created": 1610539447489,
+                    "text": "让应用程序员不要触摸他们不应该触摸的部分"
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "c8i0lal9f1s0",
+                    "created": 1610539461548,
+                    "text": "使类库的创建者（研发程序员）在不影响后者使用的情况下完善更新工具库"
+                },
+                "children": []
+            }
+        ]
+    },
+    "template": "right",
+    "theme": "classic",
+    "version": "1.4.43"
+}
