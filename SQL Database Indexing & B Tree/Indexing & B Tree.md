@@ -81,3 +81,13 @@
 ## Disadvantages
 * to remain sorted order, in the worst case, all blocks will be altered when inserting new data.
 * indices have to change accordingly
+
+
+# 5. Clustering Index
+## Introduction
+* Clustering index is created on a data file which file records are physically ordered based on non-key field
+* Clustering index is a sparse index, created on first occurrence of every value of the clustering field
+* Searching >= logI + 1
+* Insertion = (B + I)
+* When searching when duplicated records exist, binary search on indices to find the block of first occurrence of the target, because of the records are sorted, we can continue search on the next block of the first occurrence block
+* Need to maintain a pointer in each block, which points to the next block
