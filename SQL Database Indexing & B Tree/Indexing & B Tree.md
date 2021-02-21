@@ -100,3 +100,17 @@
 * Secondary Non-key Index
   * create index for unique values in the table, but the block pointer also maintains the record pointer
   * sparse index
+  
+# 8. Multi Level Indexing
+## Introduction
+* create primary indices on secondary indices.
+* because the secondary index keys is ordered, we can create primary index for the index block.
+* we can repeat the process and create more levels of indexes until there is only one index.
+* all the indices are primary indices except for the first level index which can be any kind of index.
+
+## Time Complexity of Multi Level Index
+* O(logfI), f = blocking factor, I = indices
+
+## Disadvantages of static multi level index
+* ISAM(Indexed sequential Access Method)
+* insertion is too costly
