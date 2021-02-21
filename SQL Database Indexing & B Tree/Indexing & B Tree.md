@@ -114,3 +114,19 @@
 ## Disadvantages of static multi level index
 * ISAM(Indexed sequential Access Method)
 * insertion is too costly
+
+# 9. Dynamic Multi Level Indexing: Introduction to B Trees
+## Introduction
+* Each node in B-Tree is of from <P1, <K1, Ptr1>, P2, <K2, Ptr2>,...,<K(q-1), Ptr(q-1)>Pq> where q <= p
+  * Pi: tree pointer
+  * Ki: Key
+  * Ptri: Data Pointer
+
+* With in each node, K1 < K2 < ... < K(q - 1)
+* For all search values X in the subtree pointer by Pi, K(i-1) < X < Ki
+* Each node has at most p tree pointers
+* Each node except node and leaf, has at least ceil(p/2) tree pointers, root and leaf node have at least 2 tree pointers
+* A node with q tree pointers will have q - 1 index entries.
+* All leaf nodes will be at the same level
+
+* B-Tree order: max tree pointers in a node
