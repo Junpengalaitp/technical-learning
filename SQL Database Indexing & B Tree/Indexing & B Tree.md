@@ -83,7 +83,7 @@
 * indices have to change accordingly
 
 
-# 5. Clustering Index
+# 6. Clustering Index
 ## Introduction
 * Clustering index is created on a data file which file records are physically ordered based on non-key field
 * Clustering index is a sparse index, created on first occurrence of every value of the clustering field
@@ -91,3 +91,12 @@
 * Insertion = (B + I)
 * When searching when duplicated records exist, binary search on indices to find the block of first occurrence of the target, because of the records are sorted, we can continue search on the next block of the first occurrence block
 * Need to maintain a pointer in each block, which points to the next block
+
+# 7. Secondary Index (unordered + key/non-key)
+* Secondary Key Index (table is not ordered by key)
+  * have to create indices for every record in the table
+  * dense index 
+  * O(logI) searching time
+* Secondary Non-key Index
+  * create index for unique values in the table, but the block pointer also maintains the record pointer
+  * sparse index
