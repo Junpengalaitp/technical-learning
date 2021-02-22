@@ -130,3 +130,10 @@
 * All leaf nodes will be at the same level
 
 * B-Tree order: max tree pointers in a node
+
+# 10. Insertion to B Trees
+* always insert to a leaf node
+* if the leaf node overflows(exceeds max index entry) after insertion, do a node split
+  * take the mid index entry to parent and the left and right as its children
+  * if the parent overflows, repeat this process
+* on insertion, only overflow can happen
