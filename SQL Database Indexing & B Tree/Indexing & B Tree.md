@@ -115,7 +115,7 @@
 * ISAM(Indexed sequential Access Method)
 * insertion is too costly
 
-# 9. Dynamic Multi Level Indexing: Introduction to B Trees
+# 9. Dynamic Multi Level Indexing: Introduction to B-Trees
 ## Introduction
 * Each node in B-Tree is of from <P1, <K1, Ptr1>, P2, <K2, Ptr2>,...,<K(q-1), Ptr(q-1)>Pq> where q <= p
   * Pi: tree pointer
@@ -131,9 +131,23 @@
 
 * B-Tree order: max tree pointers in a node
 
-# 10. Insertion to B Trees
+# 10. Insertion in B-Trees
 * always insert to a leaf node
-* if the leaf node overflows(exceeds max index entry) after insertion, do a node split
+* if the leaf node overflows(exceeds max index entry(order - 1)) after insertion, do a node split
   * take the mid index entry to parent and the left and right as its children
   * if the parent overflows, repeat this process
 * on insertion, only overflow can happen
+
+# 11. Deletion in B-Trees
+### Delete a leaf node
+ * No underflow(index entries is less than the min index entry ceil(p/2) - 1), do nothing
+ * underflow
+  * borrow from sibling(left or right rotate)
+  * if both siblings are not available, merge with sibling and bring the parent entry down to merged node
+    * this may lead to parent underflow, in this case, merge the parent with one of parent sibling
+    * after parent merge, parent node will have one more tree pointer, bring down one index entry from grandparent
+* if root node is empty, remove the root node
+
+### Delete in a non-leaf node
+* replace the index entry with its inorder predcessor or successor(always on leaf nodes), pick predcessor only or successor only, do not need to compare, this is because we want minimize the hard disk operations which is costly
+* if its leads to underflow to the leaf node, deal it with the same method as leaf node deletion
