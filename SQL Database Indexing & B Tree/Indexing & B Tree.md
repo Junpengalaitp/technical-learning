@@ -149,5 +149,15 @@
 * if root node is empty, remove the root node
 
 ### Delete in a non-leaf node
-* replace the index entry with its inorder predcessor or successor(always on leaf nodes), pick predcessor only or successor only, do not need to compare, this is because we want minimize the hard disk operations which is costly
+* replace the index entry with its inorder predecessor or successor(always on leaf nodes), pick predecessor only or successor only, do not need to compare, this is because we want minimize the hard disk operations which is costly
 * if its leads to underflow to the leaf node, deal it with the same method as leaf node deletion
+
+# 12. B+ Tree 
+* all data pointers exist in leaf nodes, non-leaf nodes only contain keys.
+* all leaf nodes have a pointer points to the next leaf node, so the leaf nodes are forming a linked list
+
+# 13. Insertion in B+ Tree
+* left node degree and non-leaf node degree
+* when overflow, do a node split similar to B-Tree, but only pull mid value key to parent and keep the mid <key, value> in one of the children
+* Select * from table where id >= 5;
+  * find the leaf node of 5 and use left pointers to get all data that great than 5 without traverse the whole tree
