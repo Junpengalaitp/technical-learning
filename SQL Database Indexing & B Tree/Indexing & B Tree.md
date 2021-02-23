@@ -161,3 +161,6 @@
 * when overflow, do a node split similar to B-Tree, but only pull mid value key to parent and keep the mid <key, value> in one of the children
 * Select * from table where id >= 5;
   * find the leaf node of 5 and use left pointers to get all data that great than 5 without traverse the whole tree
+* Left biasing & Right biasing
+  * determines the one extra data going to left or right node when spliting odd number of nodes
+  * in left(right) biasing, the largest value in left(right) node is the same with the key value
