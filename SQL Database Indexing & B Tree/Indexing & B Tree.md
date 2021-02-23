@@ -163,4 +163,13 @@
   * find the leaf node of 5 and use left pointers to get all data that great than 5 without traverse the whole tree
 * Left biasing & Right biasing
   * determines the one extra data going to left or right node when spliting odd number of nodes
-  * in left(right) biasing, the largest value in left(right) node is the same with the key value
+  * in left(right) biasing, the largest(smallest) value in left(right) node is the same with the key value
+
+# 14. Deletion in B+ Tree
+* need to maintain the key-chidren same property
+  * change the parent key with the largest value in the deletion node
+* underflow
+  * borrow
+  * merge
+  * no rotation on leaf node
+  * rotation on non-leaf node
