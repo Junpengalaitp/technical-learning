@@ -63,6 +63,14 @@
   * 实现行为不受装饰栈顺序影响的装饰比较困难
   * 各层的初始化配置代码看上去可能会糟糕
 
+## 例子
+* Java线程池中BlockingQueue的实现PriorityBlockingQueue是个无界队列，即使设置了初始容量，当队列满时，会触发tryGrow()方法扩充容量。因此会导致线程池的拒绝策略无法触发，造成OOM。
+  * 使用装饰器模式继承BlockingQueue接口, 将PriorityBlockingQueue的一个实例作为参数传入，除了offer()方法之外的实现直接调用该实例的对应方法。offer()方法会对比当前队列长度和容量，如果长度超过容量会返回false，使得拒绝策略可以正常触发。
+  * PriorityBlockingQueue的size()方法只需要O(1)时间，因为内部使用了AtomicInteger来记录size。
+* ThreadPoolExecutor实现类本身只接受runnable的类型，它可以使用submit(Callable)是其父类AbstractExecutorService实现的, 该方法会将Callable经过newTaskFor()方法转化成一个RunnableFuture类(就是一个接口同时继承了Runnable, Future接口)。再将RunnableFuture作为Runnable提交给ThreadPoolExecutor。
+  * 因为newTaskFor()的转换，原本的Callable如果继承的其它的接口(比如说Comparable)类型会丢失，所以需要重写newTaskFor()方法以及继承FutureTask来创造一个ComparableFutureTask
+  * 重写newTaskFor()会返回ComparableFutureTask对象。
+  * ComparableFutureTask算是装饰者模式，将继承了Comparable的Callable作为变量传入，然后ComparableFutureTask的CompareTo()方法使用这个变量的compareTo()方法比较
 # 门面(Facade)
 
 # 享元(Flyweight)

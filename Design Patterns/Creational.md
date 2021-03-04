@@ -42,7 +42,16 @@
   * 开闭原则
 * 缺点
   * 需要引入众多接口和类，代码可能会比之前更加复杂
+  
 # 建造器(Builder)
+## 意图
+* 使你能够分步骤创建复杂对象。 该模式允许你使用相同的创建代码生成不同类型和形式的对象。
+
+## 例子
+* 基于Java8函数式编程的通用Builder方法
+  * 将对象的::new方法引用作为Supplier参数传入Builder对象, 使用静态构造器of()
+  * 建造对象的属性通过将setter方法作为BiConsumer做为参数和值一起传入with()方法，然后使用Lambda函数将BiConsumer和值转换为Consumer方法，加入instanceModifiers列表。
+  * 在Build函数里从supplier拿到::new方法作为值传入instanceModifiers列表的各个Consumer, 然后返回这个Value
 
 # 原型(Prototype)
 
