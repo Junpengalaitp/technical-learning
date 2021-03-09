@@ -183,3 +183,39 @@
 * --raw和--no-raw
   * --no-raw: 返回原始格式
   * --raw: 返回格式化结果
+
+## 3.3 Pipeline
+### 3.3.1 Pipeline概念
+* 发送命令+返回结果的时间成为RTT, Round Trip Time
+* 非批量操作命令多次执行会消耗大量RTT时间
+* Pipeline机制能够将一组redis命令组装，通过一次RTT传输给Redis
+### 3.3.3 原生批量命令与Pipeline对比
+* 原生命令是原子性的，Pipeline是非原子性的
+* 原生命令是一个命令对应多个key, Pipeline支持多个命令
+* 原生批量命令是Redis服务端支持实现的，Pipeline需要客户端和服务端共同实现
+
+## 3.4 事务与Lua
+### 3.4.1 事务
+* 将一组需要一起执行的命令放到multi和exec两个命令之间
+* Redis不支持回滚(发生运行时错误需要自己处理)
+  
+## 3.5 Bitmaps
+### 3.5.1 数据结构模型
+* Bitmaps本身不是一种数据结构，实际上是字符串，但是可以对其进行位操作
+
+## 3.6 HyperLogLog
+* 实际类型为字符串，其实是一种基数算法，可以利用极少的内存空间完成独立总数的统计
+* 内存占用非常小，但是存在错误率
+* 使用场景
+  * 只是为了计算独立总数，不需要获取单条数据
+  * 可以容忍一定误差率
+
+## 3.7 发布订阅
+### 3.7.1 命令
+* 发布消息: publish channel message
+* 订阅消息：subscribe channel [channel...]
+* 客户端在执行订阅命令后就进入了订阅状态，只能接受subscribe, psubscribe, unsubscribe, punsubscribe命令
+* Redis不会对消息进行持久化
+
+## 3.8 GEO
+* 支持存储地理位置信息
