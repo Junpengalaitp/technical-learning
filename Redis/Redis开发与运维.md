@@ -219,3 +219,94 @@
 
 ## 3.8 GEO
 * 支持存储地理位置信息
+
+# 第四章 客户端
+
+# 第五章 持久化
+## 5.1 RDB(Redis Database)
+* 把当前进程数据生成快照保存到硬盘的过程，可以自动或手动触发
+### 5.1.1 触发机制
+* 手动触发
+  * save命令: 阻塞当前redis服务器，直到RDB过程完成
+  * bgsave: redis进程执行fork操作创建子进程，阻塞只发生在fork阶段的很短时间
+* 自动触发
+  * 使用save相关配置，如“save m n”。表示m秒内数据集存在n次修改时，自动触发bgsave
+  * 如果从节点执行全量复制操作，主节点自动执行bgsave生成RDB文件并发送给从节点
+  * 执行debug reload命令重新加载Redis时
+  * 默认情况下执行shutdown命令时，如果没有开启AOF持久化功能则自动执行bgsave
+
+### 5.1.2 流程说明
+* bgsave是主流的触发RDB方式
+
+### 5.1.3 RDB文件的处理
+* 保存: RDB文件保存在dir配置指定的目录下，文件名通过dbfilename配置指定。可通过执行config set dir {newDir}和config set dbfilename {newFilename}运行期动态执行，当下次运行时RDB文件会保存到新目录
+* 压缩: Redis默认采用LZF算法对生成的RDB文件做压缩处理，压缩后的文件远远小于内存大小，默认开启。可通过参数config set rdbcompression{yes|no}动态修改。
+* 校验: 如果Redis加载损坏的RDB文件时拒绝启动，可以用redis-check-dump工具进行检测
+
+### 5.1.4 RDB的优缺点
+* 优点
+  * RDB是一个紧凑压缩的二进制文件，代表Redis在某个时间点上的数据快照。非常适合于备份，全量复制等场景。比如每6小时执行bgsave备份，并把RDB文件拷贝到远程机器或者文件系统中用于灾备。
+  * Redis加载RDB恢复数据远远快于AOF的方式
+* 缺点
+  * 无法做到实时持久化，属于重量级操作
+  * 不向后兼容
+
+## 5.2 AOF(append only file)
+### 5.2.1 使用AOF
+* 设置配置: append only yes, 默认不开启
+* AOF文件名通过appendfilename配置设置，默认文件名是appendonly.aof，保存路径同RDB一致，通过dir配置指定
+* AOF工作流程
+  * 命令写入(append)
+  * 文件同步(sync)
+  * 文件重写(rewrite)
+  * 重启加载(load)
+### 5.2.2 命令写入
+* AOF写入的内容直接是文本协议格式
+  * 文本协议具有很好的兼容性
+  * 开启AOF后，所有写入的命令都包含追加操作，直接采用协议格式，避免了二次处理开销
+  * 文本协议具有可读性，方便直接修改和处理
+### 5.2.3 文件同步
+* 同步策略
+  * always: 每次命令写入aof_buf后调用系统fsync操作同步到AOF文件，fsync完成后线程返回。(不建议)
+  * everysec: 命令写入aof_buf后调用系统write操作，write完成后线程返回。fsync同步文件操作由专门线程每秒调用一次。(默认配置)
+  * no: 不对AOF文件做fsync同步，同步硬盘操作有操作系统负责，通常同步周期最长30秒。(提高了性能，但数据安全性无法保证)
+
+### 5.2.4 重写机制
+* 用于压缩AOF文件体积
+  * 进程内已经超时的数据不再写入文件
+  * 旧的AOF文件含有无效命令
+  * 多条写命令可以合并为一个
+* 手动触发: 直接调用bgrewriteaof
+* 自动触发: 根据auto-aof-rewrite-min-size和auto-aof-rewrite-percentage参数确定自动触发时机
+  * auto-aof-rewrite-min-size: 触发重写的最小体积，默认为64MB
+  * auto-aof-rewrite-percentage: 代表当前AOF文件空间和上一次重写后AOF文件空间比值
+* 重写流程
+  * 执行AOF重写请求
+    * 如果当前进程正在执行AOF重写，请求不执行
+    * 如果正在执行bgsave操作，重写命令延时到bgsave完成后再执行
+  * 父进程执行fork创建子进程，开销等同于bgsave过程
+  * 子进程根据内存快照，按照命令合并规则写入到新的AOF文件。
+  * 新得到AOF文件写入完成后，子进程发送信号给父进程，父进程更新统计信息。
+
+### 5.2.5 重启加载
+* AOF持久化开启且存在AOF文件时，优先加载AOF文件
+* AOF关闭时加载RDB文件
+* 加载AOF/RDB成功后，redis启动成功
+* AOF/RDB文件存在错误时，Redis启动失败并打印错误信息
+
+### 5.2.6 文件校验
+* 加载损坏的AOF文件时会拒绝启动
+
+## 5.3 问题定位与优化
+### 5.3.1 fork操作
+* fork创建的子进程不需要拷贝父进程的物理内存空间，但会复制父进程的空间内存页表。
+* 优先使用物理机或者高效支持fork操作的虚拟化技术，避免使用Xen
+* 控制Redis实例最大可用内存
+* 合理配置Linux内存分配策略，避免物理内存不足导致fork失败
+* 降低fork操作的频率
+
+### 5.3.2 子进程开销的监控与优化
+* CPU
+* 内存
+* 硬盘
+### 5.3.3 AOF追加阻塞
