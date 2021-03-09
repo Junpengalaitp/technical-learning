@@ -128,3 +128,58 @@
 ### 2.6.2 内部编码
 * ziplist
 * skiplist
+
+
+# 第三章 小功能大用处
+## 慢查询分析
+* Redis执行一条命令的四步骤
+  * 发送命令
+  * 命令排队
+  * 命令执行
+  * 返回结果
+* 慢查询只统计命令执行的时间
+
+### 3.1.1 慢查询的两个配置参数
+* 预设阀值
+  * slowlog-log-slower-than
+    * 等于0时记录所有，小于0时不记录
+* 慢查询记录存放位置
+  * slowlog-max-len
+    * Redis用了一个列表存放log，用于设置列表最大长度
+* 使用config set命令修改
+* 使用config rewrite命令将配置持久化到本地配置文件
+* 获取慢查询日志
+  * slowlog get [n]
+* 重置慢查询日志
+  * slowlog reset
+
+
+### 3.1.1 慢查询的最佳实践
+* slowlog-max-len建议设的较大，比如1000
+* slowlog-log-slower-than建议设置的较小，如1毫秒
+* 因为命令执行排队机制，慢查询会导致其它命令级联阻塞，因此当客户端出现请求超时，需要检查该时间点是否有对应的慢查询。
+* 由于慢查询日志时一个先进先出的队列，也就是说如果慢查询比较多的话，可能会丢失部分慢查询命令，为了防止这种情况发生，可以定期执行slow get命令将慢查询日志持久化到其它存储中
+
+## Redis Shell
+### 3.2.1 redis-cli详解
+* -r: repeat, 将命令重复执行指定的次数
+* -i: 结合-r使用，指定每次重复的时间间隔
+* -x: 从标准输入(stdin)读取数据作为redis-cli的最后一个参数
+  * echo "world" | redis-cli -x set hello
+* -c: cluster, 连接Redis集群节点时使用，防止moved和ask异常
+* -a: auth, 如果配置了密码，使用这个命令就不需要手动输入auth命令
+* --scan和--pattern: 扫描指定模式的键，相当于使用scan命令
+* --slave: 将当前客户端模拟成当前Redis节点的从节点。
+* --rdb: 生成并发送RDB持久化文件
+* --pipe: 将命令封装成Redis通信协议定义的数据格式，批量发送给Redis执行
+* --bigkeys: 使用scan命令对Redis的键进行采样，从中找到内存占用比较大的键值
+* --eval: 用于执行指定的Lua脚本
+* --latency
+  * --latency: 测试客户端到目标Redis的网络延时
+  * --latency-history: 分时段的形式了解延时信息
+  * --latency-dist: 使用统计图表形式输出统计信息
+* --stat
+  * 实时获取Redis的重要统计信息
+* --raw和--no-raw
+  * --no-raw: 返回原始格式
+  * --raw: 返回格式化结果
