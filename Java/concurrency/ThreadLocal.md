@@ -15,3 +15,18 @@
 ## 11.10 ThreadLocal使用不当可能会导致内存泄漏
 * ThreadLocalMap内部是一个Entry数组，继承自WeakReference，其内部的value用来存放ThreadLocal的set方法传递的值，ThreadLocal对象为它的key(弱引用)
 * 因为key为弱引用，当它没有被其他地方引用时，会被GC，但value不会（key回收后仍然存在，key变为null）
+
+
+# ThreadLocalRandom类解析
+## 3.1 Random类及其局限性
+* 新的随机数生成需要两个步骤
+  * 首先根据老的种子来生成新的种子
+  * 然后根据新的种子来计算新的随机数
+* 需要保证原子性，当多个线程根据同一个老种子来计算新种子时，第一个线程的新种子算出来后，第二个线程要丢弃自己老的种子，而使用第一个线程的新种子来计算自己的新种子，这样才能保证随机性。
+* 使用了AtomicLong和CAS，所以会造成大量的线程进行自旋重试，这会降低并发性能。
+
+## 3.2 ThreadLocalRandom
+* Random的缺点是多个线程会使用同一个原子性种子变量，从而导致原子变量更新的竞争。
+* 如果每个线程都维护一个种子变量，则每个线程生成随机数时都根据自己老的种子计算新的种子，并使用新种子更新老种子，再根据新种子计算随机数，就不会存在竞争问题了。
+* 继承自ThreadLocal，类中并没有存放具体的种子，具体的种子存放在具体的调用线程的threadLocalRandomSeed变量里面。
+* 当线程调用ThreadLocalRandom.current()方法时，ThreadLocalRandom负责初始化调用线程的threadLocalRandomSeed变量。
