@@ -30,3 +30,11 @@
 * 重视专业知识和执行力，而非头衔。Create a supportive environment where everyone can be themselves.
 * 成败与共，无论合适，互帮互助。Look for a point of view you haven't heard yet.
 * 助人为乐，慷慨分享知识与人脉。Try to understand where others are coming from. Trust that their intentions are positive.
+
+* SAP的企业原则是"活到老学到老"，提倡员工根据爱好自由流动，选择适合的岗位继续发展。
+* 低调的企业哲学
+  * 和硅谷公司最大的不同，SAP总是低调，不张扬
+* 工业界的偏执狂
+  * 坚持其认定的技术发展方向、坚持制造完美的产品、坚持专注于企业应用软件市场
+* 欧洲企业更重视开始时的市场研究，指定市场计划，在投放市场时尽量完善产品
+* 在SAP，对于市场、人力资源和客户关系都是长远投资
