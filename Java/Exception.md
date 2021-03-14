@@ -61,6 +61,16 @@
 ## Java 标准异常
 * Throwable这个Java类被用来表示任何可以作为异常被抛出的类。
   * Error: 编译时的系统错误
+    * IncompatibleClassChangeError.
+      * IllegalAccessError
+      * NoSuchFieldError
+      * NoSuchMethodError
+    * VirtualMachineError
+      * OutOfMemoryError
+        * OutOfDirectMemoryError
+      * StackOverflowError
+      * InternalError
+      * UnknownError
   * Exception: 可以被抛出的基本类型
 * RuntimeException
   * 无法预料的错误
