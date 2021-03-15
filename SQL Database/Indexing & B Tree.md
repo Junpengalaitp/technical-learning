@@ -4,7 +4,7 @@
 
 ## Hard Disk Storage
 * Divided into equal sizes blocks, usually 512KB per block.
-* SQL tables are divided into hard disk block sized blocks, and stored in the hard disk
+* SQL tables are divided into hard disk block sized chunks, and are stored in the hard disk
 
 ## File System
 * File System read and store data sequentially most of the time.
@@ -25,7 +25,7 @@
 
 #### Data transfer from disk to memory only happen in terms of blocks
 * with spanned organization, read one record may transfer multiple blocks, which is costly.
-* with unspanned organization, read one record only one block is transfer.
+* with unspanned organization, read one record only takes one block access.
 * unspanned organization is used most commonly
 
 ### Fixed & Dynamic length of records
@@ -63,7 +63,7 @@
 # 5. Primary Index
 ## Introduction
 * Indexing is done based on primary key of data file.
-* The actual data file is ordered based on primary key
+* The actual data file is ordered based on primary keys.
 
 1. Primary index is an ordered file with
    * primary key of data file
